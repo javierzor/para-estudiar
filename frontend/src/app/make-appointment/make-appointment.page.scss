@@ -1,0 +1,163 @@
+
+// mantener y pagar
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .ripple-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    user-select: none;
+  }
+  
+  .rounded-rectangle {
+    width: 100%;
+    height: 75px;
+    border-radius: 8px;
+  }
+// Mantener y pagar
+
+
+//   badge
+.v2-badge {
+    padding: 3px 8px;
+    font-weight: 600;
+    font-size: 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+
+
+  .v2-badge-pagaricono {
+    color: white;
+    background-color: linear-gradient(#FFF0A8, #F9B421);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+  }
+  .v2-badge-pagartexto {
+    color: white;
+    background-color: #8d8d8d80;
+  }
+
+  .v2-badge-pagoconfirmado {
+    color: white;
+    background-color: #59e037bb;
+  }
+
+
+// badge
+
+.payment-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .payment-progress-button {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #3880ff;
+    color: white;
+    font-size: 1.5rem;
+    --ripple-background: radial-gradient(circle, rgba(0, 150, 136, 0.4), rgba(0, 255, 0, 0.6));
+  }
+  
+  .counter {
+    position: absolute;
+    font-size: 2rem;
+  }
+  
+  .progress-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+  }
+  
+  svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+  
+  .progress-ring__circle {
+    stroke: white;
+    stroke-width: 10;
+    fill: transparent;
+    r: 54;
+    cx: 60;
+    cy: 60;
+    transition: stroke-dashoffset 1s linear;
+  }
+
+
+//   input imagen
+
+.file-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Sin padding extra */
+    margin: 0;  /* Eliminar margen superior e inferior */
+    width: 100%; /* Ajusta al 100% del contenedor */
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #3b82f6;
+    padding: 10px;  /* Reducir padding dentro del label */
+    min-height: 70px; /* Altura mínima */
+    max-height: 140px; /* Altura máxima */
+    width: 100%;       /* Ajustado al 100% del ancho disponible */
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin: 10px 0; /* Espaciado solo para la separación entre campos */
+  }
+  
+  label:hover {
+    background-color: #e0f2ff;
+  }
+  
+  svg {
+    width: auto; /* Ajuste más compacto del SVG */
+    height: 40%; /* Mantener proporciones */
+  }
+  
+  p {
+    margin-top: 2px; /* Reducir espacio entre SVG y texto */
+    font-size: 11px; /* Tamaño de texto compacto */
+    color: #3b82f6;
+  }
+  
+
+// input imagen

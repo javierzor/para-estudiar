@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar class="header-toolbar">
+    <ion-title class="header-title">Detalles del Ticket</ion-title>
+
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+
+  <div style="position:absolute; right:0%; top:1%;z-index: 20;">
+    <ion-fab-button (click)="closeModal()"><ion-icon name="close"></ion-icon></ion-fab-button>
+  </div>
+
+  <ion-card class="ticket-card">
+    <ion-card-header>
+      <ion-card-title class="card-title">{{ ticket.sitiowebnegocio }}</ion-card-title>
+      <ion-card-subtitle class="card-subtitle">Ticket: {{ ticket.nroticketfolio }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p class="detail"><strong>Monto Total:</strong> {{ ticket.montototal }}</p>
+      <p class="detail"><strong>Fecha Compra:</strong> {{ ticket.fechacompra }}</p>
+      <p class="detail"><strong>Hora Compra:</strong> {{ ticket.horacompra }}</p>
+      <div class="image-container">
+        <img [src]="ticket.urlimagen" class="fullsize-img" />
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center">
+    <ion-tabs>
+      <ion-tab-bar slot="top">
+        <ion-tab-button routerLinkActive="tab-selected" routerLink="/home" tab="home">
+          <ion-icon name="albums-outline"></ion-icon>
+          <ion-label>Facturas</ion-label>
+        </ion-tab-button>
+        <ion-tab-button routerLinkActive="tab-selected" routerLink="/make-appointment" tab="make-appointment">
+          <ion-icon name="logo-buffer"></ion-icon>
+          <ion-label>Agregar</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-text-center">
+    <h3>Sistema de FactuTicket</h3>
+  </div>
+
+  <ion-list>
+    <ion-list-header>
+      Lista de Solicitudes:
+    </ion-list-header>
+
+    <ion-grid>
+      <ion-row responsive-sm>
+        <ion-col size="12" size-md="6" size-lg="4" *ngFor="let solicituddesdetickets of Bookings">
+          <ion-card class="custom-card" (click)="openTicketModal(solicituddesdetickets)">
+            <ion-card-header>
+              <ion-card-title>{{solicituddesdetickets.sitiowebnegocio}}</ion-card-title>
+              <ion-card-subtitle>Ticket: {{solicituddesdetickets.nroticketfolio}}</ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-card-content>
+              <p><strong>Monto Total:</strong> {{solicituddesdetickets.montototal}}</p>
+              <p><strong>Fecha Compra:</strong> {{solicituddesdetickets.fechacompra}}</p>
+              <p><strong>Hora Compra:</strong> {{solicituddesdetickets.horacompra}}</p>
+              <img [src]="solicituddesdetickets.urlimagen" class="thumbnail-img" />
+            </ion-card-content>
+
+            <ion-item class="custom-item">
+              <ion-icon name="cash-outline" slot="start" color="primary"></ion-icon>
+              <ion-label><strong>Monto Total:</strong> {{solicituddesdetickets.montototal}}</ion-label>
+            </ion-item>
+
+            <ion-row>
+              <ion-col>
+                <ion-button expand="full" fill="outline" color="primary" [routerLink]="['/edit-appointment/', solicituddesdetickets.$key]">
+                  <ion-icon name="create"></ion-icon> Editar
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button expand="full" fill="outline" color="danger" (click)="deleteBooking(solicituddesdetickets.$key)">
+                  <ion-icon name="trash"></ion-icon> Eliminar
+                </ion-button>
+              </ion-col>
+            </ion-row>
+
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+  <!-- <ion-modal #ticketModal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Detalles del Ticket</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="closeTicketModal()" size="large">
+              <ion-icon name="close" style="font-size: 2rem; color: #ff0000;"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+  
+      <ion-content>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{selectedTicket?.sitiowebnegocio}}</ion-card-title>
+            <ion-card-subtitle>Ticket: {{selectedTicket?.nroticketfolio}}</ion-card-subtitle>
+          </ion-card-header>
+  
+          <ion-card-content>
+            <p><strong>Monto Total:</strong> {{selectedTicket?.montototal}}</p>
+            <p><strong>Fecha Compra:</strong> {{selectedTicket?.fechacompra}}</p>
+            <p><strong>Hora Compra:</strong> {{selectedTicket?.horacompra}}</p>
+            <img [src]="selectedTicket?.urlimagen" class="fullsize-img" />
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal> -->
+</ion-content>

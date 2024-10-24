@@ -1,0 +1,58 @@
+.header-toolbar {
+  background-color: #4a90e2; /* Color de fondo del encabezado */
+  border-radius: 0 0 12px 12px; /* Bordes redondeados en la parte inferior */
+}
+
+.header-title {
+  color: white; /* Color del título */
+  font-size: 1.5rem; /* Tamaño del texto */
+}
+
+.close-button {
+  background: transparent; /* Fondo transparente */
+  padding: 0; /* Sin padding para el botón */
+}
+
+.close-icon {
+  font-size: 1.5rem; /* Tamaño grande de la X */
+  color: white; /* Color de la X */
+}
+
+.content {
+  background-color: #f9f9f9; /* Color de fondo del contenido */
+}
+
+.ticket-card {
+  border-radius: 12px; /* Bordes redondeados del card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin: 10px; /* Margen alrededor del card */
+}
+
+.card-title {
+  font-size: 1.5rem; /* Tamaño del título del card */
+  font-weight: bold; /* Negrita */
+  color: #333; /* Color del texto */
+}
+
+.card-subtitle {
+  font-size: 1.1rem; /* Tamaño del subtítulo */
+  color: #777; /* Color del subtítulo */
+}
+
+.detail {
+  font-size: 1rem; /* Tamaño de los detalles */
+  color: #555; /* Color de los detalles */
+  margin: 5px 0; /* Espaciado entre los detalles */
+}
+
+.image-container {
+  position: relative;
+  margin-top: 15px; /* Espaciado arriba de la imagen */
+}
+
+.fullsize-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Bordes redondeados para la imagen */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil en la imagen */
+}
